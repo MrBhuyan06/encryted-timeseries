@@ -35,8 +35,8 @@ function advanceEncrypt(data, key) {
   let encData = cipher.update(stringData, "utf-8", "base64");
   encData += cipher.final("base64");
   //   console.log(encData);
-  //   return Buffer.concat([iv, Buffer.from(encData, "base64")]).toString("base64");
-  return encData;
+  return Buffer.concat([iv, Buffer.from(encData, "base64")]).toString("base64");
+  // return encData;
 }
 module.exports.getRange = getRandomInt;
 module.exports.getRadomElement = getRandomElementsFromArray;

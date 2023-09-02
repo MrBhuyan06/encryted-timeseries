@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
   setInterval(() => {
     console.log(hashMsg);
     io.emit("EncryptedData", hashMsg());
-  });
+  }, 10000);
 });
 
 server.listen(PORT, () => {
