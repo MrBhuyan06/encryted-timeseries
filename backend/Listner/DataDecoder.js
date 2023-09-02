@@ -1,5 +1,6 @@
 const { log } = require("console");
 const crypto = require("crypto");
+const insertDataInDb = require("./utils/helper.js");
 require("dotenv").config();
 let salt = process.env.SALT;
 console.log(salt);
@@ -29,8 +30,9 @@ function decryptData(enData, secretKey) {
       let decryptData = Decipher.update(encryptedPayload, "base64", "utf-8");
       decryptData += Decipher.final("utf-8");
       console.log("decrptmsg", decryptData);
+      insertDataInDb(decryptData);
     } catch (err) {
-      continue;
+      console.log(err);
     }
   }
 }
