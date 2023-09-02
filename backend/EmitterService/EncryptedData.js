@@ -86,4 +86,5 @@ function generateRandomMessage() {
 }
 // console.log(hashValue);
 const hashValue = generateRandomMessage();
-console.log(hashValue);
+// console.log(hashValue);
+module.exports = generateRandomMessage;
