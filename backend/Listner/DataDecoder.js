@@ -11,7 +11,6 @@ console.log(salt);
  */
 
 function decryptData(enData, secretKey) {
-  console.log(enData);
   let messageArray = enData.split("|");
   for (let i = 0; i < messageArray.length; i++) {
     // console.log(messageArray[i]);

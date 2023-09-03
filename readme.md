@@ -1,22 +1,13 @@
-# ![logo](./screenshots/goal.png) Golify - Achieve your goals of the day
+# Encrypted-TIMESERIES
 
-![homepage](./screenshots/Creating_Todo.png)
+RealTime Data Streaming Using Nodejs(Encrypted-TIMESERIES) **_Mongo DB_**, **_Expresss JS_**, **_React JS_**, **_Node JS_**, **_Tailwind CSS_**,**_crypto_**.
 
-Golify is a todo application built using following technologies **_Mongo DB_**, **_Expresss JS_**, **_React JS_**, **_Node JS_**, **_Tailwind CSS_**.
-
-Users using the application can explain the todo in more descriptive way with the help of tasks. User can prioritize (highlight) the todo. This application provides the CRUD operations on todo.
-
-![New Feature](https://img.shields.io/badge/NEW-Updated-green) : **USER AUTHENTICATION, SORTING FEATURE, TODO TIMESTAMPS**
-
-### Icons for the project was taken from flaticons
-
-### 💟 Shout out to wonderfull icons creators [freepik](https://www.flaticon.com/authors/freepik), [pixel-perfect](https://www.flaticon.com/authors/pixel-perfect), [kiranshastry](https://www.flaticon.com/authors/kiranshastry), [Catalin Fertu](https://www.flaticon.com/authors/catalin-fertu) 💟
-
-### 💟 Shout out to wonderfull mentor [Hitesh Choudhary](https://www.instagram.com/hiteshchoudharyofficial/), Anurag 💟
+##Problem Statement
+Make a small backend application which can generate and emit an encrypted data stream over a socket, listens to incoming data stream on a socket, decrypts and decodes it, save to a time series db and then emit the saved data to a small frontend app. Backend services can be in any language (Node JS is preferred, but use Go or any other that you are comfortable with).
 
 ## 👨‍💻 About Developer 👨‍💻
 
-Hey I am Abhishek Bhuyan. Fullstack Javascript Developer from Odisha . Very much eager to explore and develop scalable, user friendly, robust applications. I also take up couple of bootcamps on web development.
+Hey I am Abhishek Bhuyan. Frontend Developer from Odisha . Very much eager to explore and develop scalable, user friendly, robust applications. I also take up couple of bootcamps on web development.
 
 [LinkedIn](https://www.linkedin.com/in/abhisekh-bhuyan-5605b3230/)
 
@@ -26,26 +17,7 @@ Do reach out if you have any project idea let's work together and achieve goals.
 
 ## 👨‍✈️ Architecture of project (Project Planning) 👨‍✈️
 
-![architecture](./planning/plan.png)
-
-## 😃 Features of golify 😃
-
-- Create Todo
-- Update Todo
-- View Todo
-- Delete Todo
-- Describe Steps of Action
-- Search Todo
-- Responsiveness
-- User Authentication
-- Sorting Todos
-- Todo Timestamp
-
-![New Feature](https://img.shields.io/badge/NEW-Updated-green)
-
-- User Authentication
-- Sorting Todos
-- Timestamp on todos
+![architecture](./img/daigram.png)
 
 ## 🎯 Machine requirements to run this project 🎯
 
@@ -60,8 +32,8 @@ Do reach out if you have any project idea let's work together and achieve goals.
 - Click on backend folder
 - Rename public.env to .env
 - Ppen the .env file
-- Provide value to PORT variable (My suggestion: 4000)
-- Provide value tp MONGODB_URL variable (My suggestion: mongodb://localhost:27017/golify)
+- Provide value to PORT FOR DIFFERENT SERVER variable (My suggestion: 4000,5000,8080)
+- Provide value tp MONGODB_URL variable (My suggestion: mongodb://localhost:27017/TimeShareDATA)
 - Open new terminal to run server
 - Run command 1: cd backend (If your terminal is not in this directory)
 - Run command 2: npm install
@@ -72,12 +44,13 @@ Do reach out if you have any project idea let's work together and achieve goals.
   - For example:
     - Port=5000 (.env file backend folder)
     - proxy:"https://localhost:5000" (package.json file frontend folder)
+    - or you can use cors modules in backend
 - Open a new terminal to run frontend
 - Run command 1: cd frontend (If your terminal is not in this directory)
 - Run command 2: npm install
 - Run command 3: npm start
 
-If your webpage doesn't load hit this url in your browser: http://localhost:300
+If your webpage doesn't load hit this url in your browser: http://localhost:3000
 
 ### 🎉 Here you go your application is up and running... 🎉
 
@@ -85,22 +58,21 @@ If your webpage doesn't load hit this url in your browser: http://localhost:300
 
 ### Web View 🖥️
 
-![Login Page](./screenshots/login.png)
-![Signup Page](./screenshots/signup.png)
-![create todo](./screenshots/Creating_Todo-2.png)
-![todos list](./screenshots/Todos.png)
-![task view](./screenshots/Todos_Task_view.png)
-![no task view](./screenshots/No_Task.png)
-![update view](./screenshots/Update_Todo.png)
-![search view](./screenshots/search.png)
+![Web View](./img/home.png)
 
-### Mobile view 📱
+![DataFormot from json](./stringtext.png)
+![EncryptText](./img/encryptpic.png)
 
-![Mobile View](./screenshots/m_full.png)
+![DecodeData](./img/decode.png)
 
-## ⏳ Meta Information ⏳
+![Mongo](./img/mongodbSchema.png)
 
-- Time taken: 7 days
-- Upcoming Future Enhancement: User Authentication
+- Time taken: 48 days
+-
+
+## 🎯 Challenges i have face 🎯
+
+- During the encrpted the data as i have new in backend i have to understand whole flow of execution of program
+- Pending Task While Fetching data from the DB in realTime cant able resolved the timeout fetch 10000ms erorr in mongodb
 
 ## 😄 Thanks for spending your valuable time on this project 😄
