@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
 const io = require("socket.io-client");
+const socketIO = require("socket.io");
 const decryptData = require("./DataDecoder.js");
 require("dotenv").config();
 const mongoose = require("mongoose");
 (async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URL);
+    await mongoose.connect(process.env.MONGODB_URl);
     console.log("DB CONNECTED");
     // express evenet listerner
 
@@ -24,17 +25,17 @@ const secretKey = process.env.PASS__KEY;
 const emitterURL = "http://localhost:6000";
 const Socket = io(emitterURL);
 
-let EncryptedData;
-let DecryptedDtata;
+let encryptedData;
+let decryptedData;
 
 Socket.on("connect", () => {
-  console.log("connected to emitter service");
+  console.log("successfully connected to the emitter server");
   /**
    * !Here will listen to the encrypted event emit in the emit service
    */
-  Socket.on("EncryptedData", (hashValue) => {
-    console.log("hashvalue from emmiter", hashValue);
-    decryptData(hashValue, secretKey);
+  Socket.on("EncryptedData", (encyValue) => {
+    console.log("hashvalue from emmiter", encyValue);
+    decryptData(encyValue, secretKey);
   });
 });
 

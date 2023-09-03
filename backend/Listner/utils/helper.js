@@ -32,7 +32,7 @@ async function insertDataInDb(data) {
     // Log the success message along with the result
     console.log("Data saved to timeseries for", currentMinStart, result);
   } catch (err) {
-    console.log("error hai", err);
+    console.log("error ", err);
   }
 }
 module.exports = insertDataInDb;

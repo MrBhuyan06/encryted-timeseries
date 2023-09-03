@@ -23,7 +23,7 @@ io.on("connection", (socket) => {
    */
   setInterval(() => {
     console.log(hashMsg);
-    io.emit("EncryptedData", hashMsg());
+    socket.emit("EncryptedData", hashMsg());
   }, 10000);
 });
 
